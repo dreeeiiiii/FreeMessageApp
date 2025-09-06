@@ -1,24 +1,65 @@
-.login-form-container{
-    background-color: rgba(0, 0, 0, 0.112);
-    height: 500px;
-    width: 500px;
-    display:flex;
-    justify-content: space-around;
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    border-radius: 20px;
-}
-h2{
-    flex:1;
-    margin-top: 10px;
-}
-form{
-    flex:3;
-  
+    min-height: 100vh;
+    background: #f2f2f2;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.password-field, .email-field{
+/* Container card */
+.login-form-container {
+    background-color: #fff;
+    width: 400px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Error message */
+.error {
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* Input fields */
+.email-field, .password-field {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }

@@ -1,15 +1,136 @@
-*{
-    margin:0;
-    padding:0;
-    border:0;
- 
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
 }
 
-body{
-    background:linear-gradient(45deg,rgba(0, 0, 255, 0.473) , rgba(0, 0, 0, 0.124));
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+/* Center container */
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Form card */
+.form-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 50px 35px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.form-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+/* Form heading */
+.form-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Label styling */
+.form-card label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Textarea styling */
+textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  outline: none;
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
+}
+
+/* Focus state for textarea */
+textarea:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 10px rgba(37, 117, 252, 0.3);
+  background-color: #fff;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+/* Submit hover effect */
+input[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Feedback message styling */
+.form-feedback {
+  background-color: #e0f7fa;
+  color: #006064;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-card {
+    padding: 35px 20px;
+  }
+
+  .form-card h2 {
+    font-size: 1.6rem;
+  }
+
+  textarea {
+    font-size: 1rem;
+  }
+
+  input[type="submit"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
 }

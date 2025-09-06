@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+}
+.dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+h1 { display: inline-block; margin: 0; color: #333; }
+.logout-btn {
+    float: right; padding: 8px 15px; background-color: #dc3545; color: #fff;
+    border: none; border-radius: 5px; cursor: pointer;
+}
+.logout-btn:hover { opacity: 0.9; }
+
+.dashboard-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.dashboard-table th, .dashboard-table td { padding: 12px 15px; border-bottom: 1px solid #ddd; text-align: left; }
+.dashboard-table th { background-color: #007BFF; color: #fff; }
+.dashboard-table tr:hover { background-color: #f1f1f1; }
+.message-preview {
+  cursor: pointer;
+  color: #333;
+  max-width: 400px;
+  max-height: 100px; /* set height so scrollbar appears */
+  display: inline-block;
+  overflow: auto; /* allows scrolling */
+  white-space: normal; /* allow text to wrap */
+  padding: 5px; /* optional, for spacing */
+  border: 1px solid #ddd; /* optional, just for clarity */
+  border-radius: 5px;
+}
+
+.action-buttons button {
+    margin-right: 5px; padding: 5px 10px; border: none; border-radius: 5px;
+    cursor: pointer; font-size: 0.9rem;
+}
+.view-btn { background-color: #17a2b8; color: #fff; }
+.reply-btn { background-color: #28a745; color: #fff; }
+.delete-btn { background-color: #dc3545; color: #fff; }
+.action-buttons button:hover { opacity: 0.9; }
+
+/* Modal styling */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+
+    /* Flexbox to perfectly center modal */
+    display: none;
+    justify-content: center; 
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 12px; 
+    width: 90%;
+    max-width: 600px; 
+    max-height: 80vh; 
+    overflow: hidden; /* Keep content neat */
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Scrollable message container */
+#viewMessageText {
+    max-height: 300px; 
+    overflow-y: auto; 
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    white-space: pre-wrap; 
+    line-height: 1.5;
+}
+
+/* Close button style */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.close-btn:hover {
+    color: #000;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+}
+
